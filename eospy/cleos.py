@@ -121,6 +121,10 @@ class Cleos :
         '''
         return self.post('chain.get_producers', params=None, json={'json':True, 'lower_bound':lower_bound, 'limit':limit}, timeout=timeout)
 
+    def get_schedule(self, timeout=30) :
+        ''' '''
+        return self.get('chain.get_producer_schedule', timeout=timeout)
+    
     #####
     # transactions
     #####
